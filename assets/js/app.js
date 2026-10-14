@@ -391,7 +391,7 @@
     var n=$('#homeNew'); if(n) render(n, ['suzuki-alto','toyota-corolla','honda-civic','kia-sportage'].map(function(id){return NEW_CARS.filter(function(c){return c.id===id})[0]}).filter(Boolean).map(newCard).join(''));
     $$('[data-photo]').forEach(function(el){ var u=MayoPhoto(el.getAttribute('data-photo'), +el.getAttribute('data-photo-i')||0, +el.getAttribute('data-photo-w')||1000); if(u){ var im=new Image(); im.onload=function(){ el.style.backgroundImage='url("'+u+'")'; el.classList.add('has-photo'); }; im.src=u; } });
     $$('[data-count-make]').forEach(function(el){var m=el.getAttribute('data-count-make'); var u=USED_CARS.filter(function(c){return c.make===m}).length, nn=NEW_CARS.filter(function(c){return c.make===m}).length; el.textContent=nn+' new · '+u+' used';});
-    $$('[data-count-city]').forEach(function(el){var m=el.getAttribute('data-count-city'); var u=USED_CARS.filter(function(c){return c.city===m}).length; el.textContent=u+' car'+(u!==1?'s':'')+' available now';});
+    $$('[data-count-city]').forEach(function(el){var m=el.getAttribute('data-count-city'); var u=USED_CARS.filter(function(c){return c.city===m}).length; el.textContent= el.tagName==='SMALL' ? (u? u+' car'+(u!==1?'s':''):'') : u+' car'+(u!==1?'s':'')+' available now';});
   }
 
   document.addEventListener('DOMContentLoaded',function(){

@@ -12,6 +12,7 @@ Owner: Wakeel Mayo · WhatsApp +92 347 4209912 · +92 305 4512133 · wakeelmayo@
 | Used car listings (add / remove) | `assets/js/data.js` → `USED_CARS` |
 | Blog articles | `assets/js/data.js` → `POSTS` |
 | Colours, fonts, layout | `assets/css/style.css` |
+| Logo | `assets/img/logo-mark.svg` |
 | Facebook / Instagram / TikTok links in header & footer | search `href="#" class="fb"` etc. in the `.html` files |
 
 ## Car photos
@@ -27,7 +28,7 @@ To use your OWN photos of a car you are selling:
 ## Pages
 
 Home, Used Cars, New Cars, Car Detail, Sell Your Car, Compare, Car Finance calculator,
-Car Inspection, Photo Credits, About, Contact, Blog, Blog Post, FAQs, city pages (Lahore, Raiwind, Kasur,
-Islamabad), Privacy Policy, Terms, 404, `sitemap.xml`, `robots.txt`.
+Car Inspection, Photo Credits, About, Contact, Blog, Blog Post, FAQs, city pages (Lahore, Islamabad, Kasur, Rawalpindi,
+Faisalabad, Gujranwala, Multan, Sialkot, Burewala), Privacy Policy, Terms, 404, `sitemap.xml`, `robots.txt`.
 
 All forms open WhatsApp with the details filled in — no server needed.

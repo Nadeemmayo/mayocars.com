@@ -460,3 +460,51 @@ footer.site-footer{background:var(--navy);color:#cbd5e1;padding-top:64px;margin-
 .cmp-slot .car-media{aspect-ratio:16/10}
 @media (max-width:640px){.hero-art .float-card{display:none}.hero-tag{font-size:11.5px;left:12px;bottom:12px}}
 .city{background-size:cover!important;background-position:center!important}
+
+/* ---------- Brand logo ---------- */
+.logo-svg{width:48px;height:48px;flex-shrink:0;filter:drop-shadow(0 6px 14px rgba(225,29,46,.35))}
+.logo-text{font-size:24px;font-weight:800;letter-spacing:1px}
+.logo-text small{font-size:8.6px;letter-spacing:1.9px;margin-top:5px;color:#8a94a6}
+.site-footer .logo-text small{color:#94a3b8}
+
+/* ---------- Original social icons ---------- */
+.social a{position:relative;overflow:hidden}
+.social .fb{background:#1877f2}
+.social .ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+.social .tt{background:#000;border:0}
+.social .tt i{color:#fff;text-shadow:-1.6px -1.2px 0 #25f4ee,1.6px 1.2px 0 #fe2c55}
+.social .wa{background:#25d366}
+.topbar .social a{box-shadow:0 0 0 2px rgba(255,255,255,.08)}
+
+/* ---------- Photo tiles: body types & brands ---------- */
+.type{padding:0;overflow:hidden;text-align:left;position:relative;border:0;box-shadow:0 6px 20px rgba(12,24,48,.08)}
+.type .t-photo{aspect-ratio:4/3;background:#e9edf5;overflow:hidden}
+.type .t-photo img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.type:hover .t-photo img{transform:scale(1.06)}
+.type h4{position:absolute;left:0;right:0;bottom:0;margin:0;padding:28px 14px 12px;color:#fff;font-size:15px;background:linear-gradient(180deg,transparent,rgba(8,17,31,.85))}
+.brand{padding:0;overflow:hidden;text-align:left}
+.brand .b-photo{aspect-ratio:16/10;background:#e9edf5;overflow:hidden}
+.brand .b-photo img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.brand:hover .b-photo img{transform:scale(1.06)}
+.brand h4{font-size:16px;padding:12px 14px 0;letter-spacing:.3px}
+.brand p{padding:0 14px 12px}
+
+/* ---------- Punjab cities ---------- */
+.city-tag{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);color:var(--navy);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 11px;border-radius:50px}
+.city{min-height:230px}
+.punjab{margin-top:22px;background:linear-gradient(120deg,var(--navy),var(--navy3));color:#fff;border-radius:20px;padding:26px;display:grid;grid-template-columns:1fr 1.6fr;gap:20px;align-items:center}
+.punjab .eyebrow{color:var(--gold);font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+.punjab h3{font-size:22px;margin:4px 0}
+.punjab p{color:#cbd5e1;font-size:14px}
+.city-chips{display:flex;flex-wrap:wrap;gap:10px}
+.city-chips a{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:9px 14px;border-radius:50px;font-size:14px;font-weight:500;transition:.2s}
+.city-chips a:hover{background:var(--red);border-color:var(--red)}
+.city-chips a i{color:var(--gold)}
+.city-chips a:hover i{color:#fff}
+.city-chips small{color:#94a3b8;font-size:11.5px}
+.city-chips small:not(:empty):before{content:"· "}
+.city-chips a:hover small{color:#fff}
+.city-chips a.all{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700}
+.city-chips a.all i{color:var(--navy)}
+@media (max-width:920px){.punjab{grid-template-columns:1fr}}
+@media (max-width:640px){.logo-svg{width:42px;height:42px}.logo-text{font-size:20px}.logo-text small{font-size:7.4px;letter-spacing:1.3px}}
