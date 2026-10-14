@@ -3,9 +3,9 @@
    Buy & Sell New and Used Cars in Lahore, Raiwind, Kasur & Islamabad
    ========================================================= */
 :root{
-  --navy:#0b1220;
-  --navy2:#121c33;
-  --navy3:#1b2742;
+  --navy:#0c1830;
+  --navy2:#132447;
+  --navy3:#1c3260;
   --red:#e11d2e;
   --red2:#b91222;
   --gold:#f5b301;
@@ -61,7 +61,7 @@ button,input,select,textarea{font-family:inherit}
 .link-arrow:hover{text-decoration:underline}
 
 /* ---------- Top bar ---------- */
-.topbar{background:var(--navy);color:#cbd5e1;font-size:13px;padding:8px 0}
+.topbar{background:#08111f;color:#cbd5e1;font-size:13px;padding:8px 0}
 .topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 .topbar .contact-links a{margin-right:18px;transition:.25s;white-space:nowrap}
 .topbar .contact-links a:hover{color:var(--gold)}
@@ -74,8 +74,8 @@ button,input,select,textarea{font-family:inherit}
 .social a:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
 .social .fb{background:#1877f2}
 .social .ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
-.social .tt{background:#000;box-shadow:inset 0 0 0 2px #25f4ee}
-.social .tt i{text-shadow:2px 2px 0 #fe2c55,-2px -2px 0 #25f4ee}
+.social .tt{background:#111;border:1.5px solid rgba(255,255,255,.28)}
+.social .tt i{color:#fff}
 .social .wa{background:var(--wa)}
 .social.small a{width:30px;height:30px;font-size:13px}
 
@@ -437,3 +437,25 @@ footer.site-footer{background:var(--navy);color:#cbd5e1;padding-top:64px;margin-
   .g-thumbs{grid-template-columns:repeat(5,1fr);gap:5px}
   .d-price{font-size:26px}
 }
+
+/* ---------- Real photos ---------- */
+.car-media img{background:#e9edf5}
+.car-media:after{content:"";position:absolute;inset:auto 0 0 0;height:38%;background:linear-gradient(180deg,transparent,rgba(8,17,31,.28));pointer-events:none}
+.hero-art .art-frame{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#1c3260,#0c1830)}
+.hero-art .art-frame img.hero-img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-art .art-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,17,31,.75));pointer-events:none}
+.hero-tag{position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;font-size:13px;font-weight:600;background:rgba(225,29,46,.92);padding:6px 14px;border-radius:50px}
+.hero-art .fc1{left:auto;right:-10px;top:auto;bottom:-22px}
+.g-credit{font-size:11.5px;color:var(--muted);margin:8px 2px 0}
+.g-credit a{color:var(--red)}
+.post .thumb{overflow:hidden}
+.post .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.post:hover .thumb img{transform:scale(1.05)}
+.post .thumb:has(img):after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,17,31,.05),rgba(8,17,31,.6))}
+.post .thumb:has(img) i{display:none}
+.post .thumb span{z-index:2}
+.city{min-height:210px}
+.city i.bgi{opacity:.0}
+.city h3,.city p{text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.cmp-slot .car-media{aspect-ratio:16/10}
+@media (max-width:640px){.hero-art .float-card{display:none}.hero-tag{font-size:11.5px;left:12px;bottom:12px}}
