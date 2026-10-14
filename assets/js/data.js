@@ -45,7 +45,7 @@ var PHOTOS = {
   civicfc: ["2017_Honda_Civic_VTi-S_sedan_(2018-08-27)_01.jpg","Honda_CIVIC_SEDAN_(DBA-FC1)_front.jpg","2017_Honda_Civic_(FC)_1.8_EL_Sedan_(12-08-2017)_02.jpg","Honda_CIVIC_SEDAN_(DBA-FC1)_interior.jpg"],
   city: ["2017_Honda_City_E_1.5_GM6_(20210313).jpg","2014_Honda_City_(GM6_MY14)_VTi_sedan_(2015-07-15)_01.jpg","HONDA_CITY_(GM4,GM5,GM6,GM8,GM9)_China_(2).jpg","HONDA_CITY_(GM4,GM5,GM6,GM8,GM9)_China_(4).jpg"],
   alto: ["Suzuki_ALTO_X_2-tone_backdoor_(HA36S)_front.JPG","Suzuki_ALTO_WORKS_(DBA-HA36S)_front.jpg","Suzuki_ALTO_WORKS_(DBA-HA36S)_rear.jpg","Suzuki_ALTO_S_(HA36S)_right_(cropped).JPG"],
-  cultus: ["2017_Suzuki_Celerio_SZ2_1.0.jpg","Suzuki_Celerio_(1).JPG","Suzuki_Celerio_1.0_Club_–_Heckansicht,_26._Juli_2015,_Düsseldorf.jpg","Cockpit_des_Suzuki_Celerio.JPG"],
+  cultus: ["2017_Suzuki_Celerio_SZ2_1.0.jpg","Suzuki_Celerio_(1).JPG","Suzuki_Celerio_1.0_Club_–_Heckansicht,_26._Juli_2015,_Düsseldorf.jpg"],
   swift: ["2017_Suzuki_Swift_(AZ)_GLX_Turbo_5-door_hatchback_(2017-07-15)_01.jpg","2017_Suzuki_Swift_SZ-T_Boosterjet_1.0.jpg","Suzuki_SWIFT_Sport_(CBA-ZC33S-VBRM)_interior.jpg"],
   fronx: ["Suzuki_Fronx_(front).jpg","Suzuki_FRONX_(4AA-WDB3S-XBSK-ZN).jpg","Suzuki_Fronx_(rear).jpg","2024_Suzuki_Fronx_rear.jpg","Suzuki_Fronx_in_Hamamatsu_Sta.jpg"],
   wagonr: ["Maruti_Wagon_R_Front.JPG","Maruti_Suzuki_-_WagonR_LXi_(front).JPG"],
