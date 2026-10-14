@@ -29,32 +29,32 @@ var SITE = {
    File names on Wikimedia Commons (https://commons.wikimedia.org).
    Free-licence photos; credits are listed on photo-credits.html */
 var PHOTOS = {
-  fortuner: ["Toyota_Fortuner_2.8_GR_Sport_4x4_2023.jpg","2021_Toyota_Fortuner_GR_Sport_2.8_4WD.jpg","2022_Toyota_Fortuner_2.8_VRZ_GR_Sport_4x2_GUN166R_(20220428).jpg","Toyota_Fortuner_(AN160)_Front.jpg","Toyota_Fortuner_(pre-facelift)_(rear).jpg"],
-  fortunerold: ["2016_Toyota_Fortuner_(AN160)_VRZ,_West_Surabaya.jpg","TOYOTA_FORTUNER_(AN150,AN160)_China.jpg","Toyota_Fortuner_G_pre-facelift_(rear).jpg","TOYOTA_FORTUNER_(AN150,AN160)_China_(2).jpg"],
-  prado: ["Toyota_Land_Cruiser_Prado_TJA250_2.4_Turbo_White_Pearl_Mica.jpg","2024_Toyota_Land_Cruiser_Prado_2.4_Turbo_in_Black_Mica,_front_left.jpg","Toyota_Land_Cruiser_Prado_TJA250_2.4_Turbo_Avant_Garde_Bronze_-_rear.jpg","Toyota_Land_Cruiser_Prado_(J250)_Auto_Zuerich_2024_DSC_6478.jpg","Toyota_Land_Cruiser_250_VX.jpg"],
+  fortuner: ["2022_Toyota_Fortuner_2.8_VRZ_GR_Sport_4x2_GUN166R_(20220428).jpg","Toyota_Fortuner_2.8_GR_Sport_4x4_2023.jpg","2021_Toyota_Fortuner_GR_Sport_2.8_4WD.jpg","Toyota_Fortuner_(AN160)_Front.jpg","TOYOTA_FORTUNER_(AN150,AN160)_China_(2).jpg"],
+  fortunerold: ["2016_Toyota_Fortuner_(AN160)_VRZ,_West_Surabaya.jpg","TOYOTA_FORTUNER_(AN150,AN160)_China.jpg","Toyota_Fortuner_(AN160)_Front.jpg"],
+  prado: ["Toyota_Land_Cruiser_Prado_(J250)_Auto_Zuerich_2024_DSC_6478.jpg","Toyota_Land_Cruiser_250_VX.jpg","Toyota_Land_Cruiser_Prado_TJA250_2.4_Turbo_White_Pearl_Mica.jpg","Toyota_Land_Cruiser_Prado_TJA250_2.4_Turbo_Avant_Garde_Bronze_-_rear.jpg","2024_Toyota_Land_Cruiser_Prado_2.4_Turbo_in_Black_Mica,_front_left.jpg"],
   pradoold: ["Toyota_LAND_CRUISER_PRADO_TX_(CBA-TRJ150W-GKTEK)_front.jpg","Toyota_Land_Cruiser_Prado_150.jpg","Toyota_LAND_CRUISER_PRADO_TX_(CBA-TRJ150W-GKTEK)_rear.jpg","Toyota_Land_Cruiser_Prado_150_interior.jpg"],
-  revo: ["2020_Toyota_Hilux_Revo_4x4_Double-Cab_2.8_Rocco.jpg","2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x4.jpg","2020_Toyota_Hilux_Revo_4x4_Double-Cab_2.8_Rocco_(Rear).jpg","Toyota_Hilux_(facelift)_front.jpg","Toyota_Hilux_(seventh_generation,_first_facelift)_(rear_2),_Serdang.jpg"],
+  revo: ["2020_Toyota_Hilux_Revo_4x4_Double-Cab_2.8_Rocco.jpg","2021_Toyota_Hilux_Revo_GR_Sport_Double-Cab_2.8_4x4.jpg","2020_Toyota_Hilux_Revo_4x4_Double-Cab_2.8_Rocco_(Rear).jpg","Toyota_Hilux_(facelift)_front.jpg"],
   vigo: ["Toyota_Hilux_Vigo_Champ_TRD.jpg","Toyota_Hilux_Vigo_Champ_Smart_Cab_2.5E_2012-2015.jpg","Toyota_Hilux_Vigo_Champ_TRD_rear.jpg","Toyota_Hilux_Vigo_Champ_TRD_interior.jpg"],
-  dala: ["Toyota_HiLux_AN120-AN130_Single_Cab.jpg","Toyota_Hilux_(facelift)_front.jpg","Toyota_Hilux_(seventh_generation,_first_facelift)_(rear_2),_Serdang.jpg"],
-  ravi: ["Suzuki_New_Carry_Pickup.jpg","Suzuki_Carry_pickup_truck_in_Thailand_(cropped).JPG","Suzuki_Carry_Mobil_Pick_Up.jpg"],
-  corolla: ["Toyota_Corolla_Altis_(E170)_facelift.jpg","2016_Toyota_Corolla_Altis_(ZRE172R)_1.6_sedan_(2017-11-28).jpg","Toyota_Corolla_Altis_sedan,_rear_view.jpg","TOYOTA_COROLLA_ALTIS_TAIWAN_2014_01.JPG","2015_Toyota_Corolla_S_interior.jpg"],
-  corollaold: ["TOYOTA_COROLLA_ALTIS_TAIWAN_2014_01.JPG","Toyota_Corolla_Altis_sedan,_rear_view.jpg","2016_Toyota_Corolla_Altis_(ZRE172R)_1.6_sedan_(2017-11-28).jpg","2015_Toyota_Corolla_S_interior.jpg"],
+  dala: ["Toyota_HiLux_AN120-AN130_Single_Cab.jpg"],
+  ravi: ["Suzuki_Carry_pickup_truck_in_Thailand_(cropped).JPG"],
+  corolla: ["Toyota_Corolla_Altis_(E170)_facelift.jpg","2016_Toyota_Corolla_Altis_(ZRE172R)_1.6_sedan_(2017-11-28).jpg","TOYOTA_COROLLA_ALTIS_TAIWAN_2014_01.JPG","2015_Toyota_Corolla_S_interior.jpg"],
+  corollaold: ["TOYOTA_COROLLA_ALTIS_TAIWAN_2014_01.JPG","2016_Toyota_Corolla_Altis_(ZRE172R)_1.6_sedan_(2017-11-28).jpg","Toyota_Corolla_Altis_(E170)_facelift.jpg","2015_Toyota_Corolla_S_interior.jpg"],
   corollacross: ["2025_Toyota_Corolla_Cross_1.8_V_HEV_in_Celestite_Gray_Metallic,_front_right.jpg","Toyota_Corolla_Cross_FL_ZVG10_1.8_G_HEV_Platinum_White_Pearl_Mica.jpg","Toyota_Corolla_Cross_Hybrid_1X7A6357.jpg","2020_Toyota_Corolla_Cross_Hybrid_Premium_Safety.jpg","Toyota_COROLLA_CROSS_HYBRID_Z_2WD_(6AA-ZVG11-KHXEB)_interior.jpg"],
   yaris: ["Toyota_Vios_XP150_Facelift_Shishi_004.jpg","Toyota_Vios_(XP150)_1.5_S_01.jpg","Toyota_Vios_XP150_(front).jpg","Toyota_Vios_XP150_(rear).jpg"],
   civicfe: ["2022_Honda_Civic_RS_1.5_FE1_(20220317)_02.jpg","Honda_Civic_Sedan_(FE1-FE4)_Washington_DC_Metro_Area,_USA.jpg","2022_Honda_Civic_Sedan_EX_in_Platinum_White_Pearl,_rear_left.jpg","2022_Honda_Civic_Touring,_rear_6.28.22.jpg","HONDA_CIVIC_HATCHBACK_HYBRID_(FE,FL)_CHINA_VERSION_INTERIOR.jpg"],
   civicfc: ["2017_Honda_Civic_VTi-S_sedan_(2018-08-27)_01.jpg","Honda_CIVIC_SEDAN_(DBA-FC1)_front.jpg","2017_Honda_Civic_(FC)_1.8_EL_Sedan_(12-08-2017)_02.jpg","Honda_CIVIC_SEDAN_(DBA-FC1)_interior.jpg"],
   city: ["2017_Honda_City_E_1.5_GM6_(20210313).jpg","2014_Honda_City_(GM6_MY14)_VTi_sedan_(2015-07-15)_01.jpg","HONDA_CITY_(GM4,GM5,GM6,GM8,GM9)_China_(2).jpg","HONDA_CITY_(GM4,GM5,GM6,GM8,GM9)_China_(4).jpg"],
-  alto: ["Suzuki_ALTO_X_2-tone_backdoor_(HA36S)_front.JPG","Suzuki_ALTO_S_(HA36S)_right_(cropped).JPG","Suzuki_ALTO_WORKS_(DBA-HA36S)_front.jpg","Suzuki_ALTO_WORKS_(DBA-HA36S)_rear.jpg"],
-  cultus: ["2nd_generation_Suzuki_Cultus.jpg","2017_Suzuki_Celerio_SZ2_1.0.jpg","Suzuki_Cultus_rear.jpg"],
-  swift: ["Suzuki_swift_green_third_generation.jpg","2017_Suzuki_Swift_(AZ)_GLX_Turbo_5-door_hatchback_(2017-07-15)_01.jpg","2017_Suzuki_Swift_SZ-T_Boosterjet_1.0.jpg","Suzuki_SWIFT_Sport_(CBA-ZC33S-VBRM)_interior.jpg"],
+  alto: ["Suzuki_ALTO_X_2-tone_backdoor_(HA36S)_front.JPG","Suzuki_ALTO_WORKS_(DBA-HA36S)_front.jpg","Suzuki_ALTO_WORKS_(DBA-HA36S)_rear.jpg","Suzuki_ALTO_S_(HA36S)_right_(cropped).JPG"],
+  cultus: ["2017_Suzuki_Celerio_SZ2_1.0.jpg","Suzuki_Celerio_(1).JPG","Suzuki_Celerio_1.0_Club_–_Heckansicht,_26._Juli_2015,_Düsseldorf.jpg","Cockpit_des_Suzuki_Celerio.JPG"],
+  swift: ["2017_Suzuki_Swift_(AZ)_GLX_Turbo_5-door_hatchback_(2017-07-15)_01.jpg","2017_Suzuki_Swift_SZ-T_Boosterjet_1.0.jpg","Suzuki_SWIFT_Sport_(CBA-ZC33S-VBRM)_interior.jpg"],
   fronx: ["Suzuki_Fronx_(front).jpg","Suzuki_FRONX_(4AA-WDB3S-XBSK-ZN).jpg","Suzuki_Fronx_(rear).jpg","2024_Suzuki_Fronx_rear.jpg","Suzuki_Fronx_in_Hamamatsu_Sta.jpg"],
-  wagonr: ["Maruti_Wagon_R_Front.JPG","Maruti_Suzuki_Wagon_R.jpg","Maruti_Suzuki_-_WagonR_LXi_(front).JPG"],
-  mehran: ["Maruti_800_AC.jpg","Maruti800.jpg","Maruti_800_(22354249525).jpg"],
-  sportage: ["Kia_Sportage_1.6_T-GDI_HEV_2WD_(2022).jpg","Kia_Sportage_Hybrid_NQ5_PE_1.6_HEV_(1).jpg","Kia_Sportage_(NQ5)_1X7A0326_(edited).jpg","Kia_Sportage_Plug-in-Hybrid_(NQ5)_IAA_2021_1X7A0113.jpg","Kia_Sportage_Plug-in-Hybrid_(NQ5)_1X7A0317.jpg"],
-  sportageql: ["2017_Kia_Sportage_(QL_MY17).jpg","2016_Kia_Sportage_(QL_MY17)_Platinum_wagon_(2017-07-15)_01.jpg","2018_Kia_Sportage_(QL_MY18)_Si_wagon_(2018-11-02)_02.jpg","KIA_SPORTAGE_(KIA_KX5)_(QL)_China_(5).jpg"],
+  wagonr: ["Maruti_Wagon_R_Front.JPG","Maruti_Suzuki_-_WagonR_LXi_(front).JPG"],
+  mehran: ["Maruti_800_AC.jpg"],
+  sportage: ["Kia_Sportage_(NQ5)_1X7A0326_(edited).jpg","Kia_Sportage_1.6_T-GDI_HEV_2WD_(2022).jpg","Kia_Sportage_Hybrid_NQ5_PE_1.6_HEV_(1).jpg","Kia_Sportage_Plug-in-Hybrid_(NQ5)_1X7A0317.jpg"],
+  sportageql: ["2016_Kia_Sportage_(QL_MY17)_Platinum_wagon_(2017-07-15)_01.jpg","2018_Kia_Sportage_(QL_MY18)_Si_wagon_(2018-11-02)_02.jpg","2017_Kia_Sportage_(QL_MY17).jpg","KIA_SPORTAGE_(KIA_KX5)_(QL)_China_(5).jpg"],
   tucson: ["Hyundai_Tucson_Hybrid_Adventure_NX4_HEV_Creamy_White_Pearl_(2).jpg","Hyundai_Tucson_NX4_1.6_GLS_HEV_Pine_Green_Matte_-_front.jpg","Hyundai_Tucson_(NX4)_1X7A0424.jpg","Hyundai_Tucson_(NX4)_PHEV_IMG_4375.jpg","HYUNDAI_TUCSON_HYBRID_(NX4)_CHINA_VERSION_INTERIOR.jpg"],
   tucsontl: ["Hyundai_Tucson_TL_FL_white_(1).jpg","2019_Hyundai_Tucson.jpg","2019_Hyundai_Tucson_Rear-Side.jpg","Hyundai_Tucson_facelift_(rear).jpg"],
-  alsvin: ["2018_Chang'an_Alsvin_(front).jpg","Changan_Alsvin_rear.jpg"]
+  alsvin: ["2018_Chang'an_Alsvin_(front).jpg"]
 };
 function commonsUrl(file, width){ return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(file)+"?width="+(width && width<=960?960:1280); }
 /* Copies of the photos are stored on our own site in images/cars/ (downloaded automatically by the GitHub Action). */
