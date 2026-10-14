@@ -56,7 +56,10 @@ var PHOTOS = {
   tucsontl: ["Hyundai_Tucson_TL_FL_white_(1).jpg","2019_Hyundai_Tucson.jpg","2019_Hyundai_Tucson_Rear-Side.jpg","Hyundai_Tucson_facelift_(rear).jpg"],
   alsvin: ["2018_Chang'an_Alsvin_(front).jpg","Changan_Alsvin_rear.jpg"]
 };
-function commonsUrl(file, width){ return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(file)+"?width="+(width||900); }
+function commonsUrl(file, width){ return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(file)+"?width="+(width && width<=960?960:1280); }
+/* Copies of the photos are stored on our own site in images/cars/ (downloaded automatically by the GitHub Action). */
+function photoSlug(file){ var m=file.match(/\.([A-Za-z0-9]+)$/), ext=m?m[1].toLowerCase():"jpg"; if(ext==="jpeg") ext="jpg"; return file.replace(/\.[A-Za-z0-9]+$/,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"")+"."+ext; }
+function localPhoto(file){ return "images/cars/"+photoSlug(file); }
 function commonsPage(file){ return "https://commons.wikimedia.org/wiki/File:"+encodeURIComponent(file); }
 
 var NEW_CARS = [

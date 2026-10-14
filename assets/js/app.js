@@ -22,14 +22,15 @@
   /* photos: "key" (set in PHOTOS, Wikimedia Commons) or ["images/cars/x.jpg", ...] (own photos) */
   function photoList(c){
     if(!c.photos) return [];
-    if(typeof c.photos==='string') return (PHOTOS[c.photos]||[]).map(function(f){return {src:commonsUrl(f,1200), thumb:commonsUrl(f,640), page:commonsPage(f)}});
-    return c.photos.map(function(p){return {src:p, thumb:p, page:null}});
+    if(typeof c.photos==='string') return (PHOTOS[c.photos]||[]).map(function(f){return {src:localPhoto(f), thumb:localPhoto(f), alt:commonsUrl(f,1280), page:commonsPage(f)}});
+    return c.photos.map(function(p){return {src:p, thumb:p, alt:null, page:null}});
   }
   function art(c,i){
     var view = MayoArt.views[i%MayoArt.views.length];
     return MayoArt.svg({body:c.body, color:c.colorHex||c.color, view:view.key, make:c.make, label:c.make+' '+c.model+' '+view.label});
   }
   window.MayoFallback = function(img){
+    var alt=img.getAttribute('data-alt'); if(alt){ img.removeAttribute('data-alt'); img.src=alt; return; }
     var k=img.getAttribute('data-car'), i=+img.getAttribute('data-i')||0;
     var c=NEW_CARS.concat(USED_CARS).filter(function(x){return x.id===k})[0];
     if(c && img.parentNode){ var d=document.createElement('div'); d.innerHTML=art(c,i); img.parentNode.replaceChild(d.firstChild,img); }
@@ -38,14 +39,16 @@
     i=i||0; var ps=photoList(c);
     if(ps.length){
       var p=ps[i%ps.length];
-      return '<img src="'+esc(big?p.src:p.thumb)+'" alt="'+esc(c.make+' '+c.model+(c.year?' '+c.year:'')+' photo '+(i+1))+'" loading="lazy" decoding="async" data-car="'+c.id+'" data-i="'+i+'" onerror="MayoFallback(this)">';
+      return '<img src="'+esc(big?p.src:p.thumb)+'" alt="'+esc(c.make+' '+c.model+(c.year?' '+c.year:'')+' photo '+(i+1))+'" loading="lazy" decoding="async" data-car="'+c.id+'" data-i="'+i+'"'+(p.alt?' data-alt="'+esc(p.alt)+'"':'')+' onerror="MayoFallback(this)">';
     }
     return art(c,i);
   }
   function viewCount(c){ var n=photoList(c).length; return n || MayoArt.views.length; }
   function viewLabel(c,i){ return photoList(c).length ? 'Photo' : MayoArt.views[i].label; }
   function photoPage(c,i){ var ps=photoList(c); return ps.length ? ps[i%ps.length].page : null; }
-  window.MayoPhoto = function(key,i,w){ var a=PHOTOS[key]||[]; return a.length?commonsUrl(a[(i||0)%a.length],w||1200):''; };
+  window.MayoPhoto = function(key,i){ var a=PHOTOS[key]||[]; return a.length?localPhoto(a[(i||0)%a.length]):''; };
+  window.MayoPhotoAlt = function(key,i){ var a=PHOTOS[key]||[]; return a.length?commonsUrl(a[(i||0)%a.length],960):''; };
+  window.MayoImgErr = function(img){ var alt=img.getAttribute('data-alt'); if(alt){ img.removeAttribute('data-alt'); img.src=alt; } else { img.remove(); } };
 
   /* ---------- Cards ---------- */
   function usedCard(c){
@@ -359,7 +362,7 @@
   function blogPage(){
     var g=$('#blogGrid');
     if(g){
-      g.innerHTML=POSTS.map(function(p){return '<a class="post reveal" href="blog-post.html?id='+p.id+'"><div class="thumb" style="background:'+p.grad+'"><img src="'+MayoPhoto(p.photo,0,800)+'" alt="" loading="lazy" onerror="this.remove()"><i class="fa-solid '+p.icon+'"></i><span>'+esc(p.cat)+'</span></div><div class="pb"><span class="meta"><i class="fa-regular fa-calendar"></i> '+new Date(p.date).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.excerpt)+'</p><span class="link-arrow" style="margin-top:12px">Read more <i class="fa-solid fa-arrow-right"></i></span></div></a>'}).join('');
+      g.innerHTML=POSTS.map(function(p){return '<a class="post reveal" href="blog-post.html?id='+p.id+'"><div class="thumb" style="background:'+p.grad+'"><img src="'+MayoPhoto(p.photo,0)+'" data-alt="'+MayoPhotoAlt(p.photo,0)+'" alt="" loading="lazy" onerror="MayoImgErr(this)"><i class="fa-solid '+p.icon+'"></i><span>'+esc(p.cat)+'</span></div><div class="pb"><span class="meta"><i class="fa-regular fa-calendar"></i> '+new Date(p.date).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.excerpt)+'</p><span class="link-arrow" style="margin-top:12px">Read more <i class="fa-solid fa-arrow-right"></i></span></div></a>'}).join('');
       reveal();
     }
     var art=$('#post');
@@ -377,7 +380,7 @@
         return '';
       }).join('')+'<div class="cta" style="margin-top:28px;padding:28px"><div><h2 style="font-size:22px">Need help choosing a car?</h2><p>Message Mayo Cars on WhatsApp — free advice, no pressure.</p></div><div class="btns"><a class="btn btn-gold" target="_blank" rel="noopener" href="'+wa('Assalam o Alaikum, I read your article "'+p.title+'" and need some advice.')+'"><i class="fa-brands fa-whatsapp"></i> WhatsApp us</a></div></div>';
       var more=$('#morePosts');
-      if(more) more.innerHTML=POSTS.filter(function(x){return x.id!==p.id}).slice(0,3).map(function(q){return '<a class="post reveal" href="blog-post.html?id='+q.id+'"><div class="thumb" style="background:'+q.grad+'"><img src="'+MayoPhoto(q.photo,0,800)+'" alt="" loading="lazy" onerror="this.remove()"><i class="fa-solid '+q.icon+'"></i><span>'+esc(q.cat)+'</span></div><div class="pb"><h3>'+esc(q.title)+'</h3><p>'+esc(q.excerpt)+'</p></div></a>'}).join('');
+      if(more) more.innerHTML=POSTS.filter(function(x){return x.id!==p.id}).slice(0,3).map(function(q){return '<a class="post reveal" href="blog-post.html?id='+q.id+'"><div class="thumb" style="background:'+q.grad+'"><img src="'+MayoPhoto(q.photo,0)+'" data-alt="'+MayoPhotoAlt(q.photo,0)+'" alt="" loading="lazy" onerror="MayoImgErr(this)"><i class="fa-solid '+q.icon+'"></i><span>'+esc(q.cat)+'</span></div><div class="pb"><h3>'+esc(q.title)+'</h3><p>'+esc(q.excerpt)+'</p></div></a>'}).join('');
       reveal();
     }
   }
